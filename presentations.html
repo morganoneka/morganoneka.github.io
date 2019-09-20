@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Barriecito|Lacquer&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+      html,body{
+        height:100%;
+      }
+      .container, .container-fluid{
+        min-height:100%;
+        overflow:hidden;
+      }
+      #col1, #col2, #col3 {
+        margin-bottom: -9999px;
+        padding-bottom: 9999px;
+      }
+      .navbar li{
+        padding-left: 10px;
+        text-transform: lowercase;
+        font-family: 'Share Tech Mono', monospace;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: lowercase
+      }
+      .container-fluid:nth-of-type(odd){
+        background-color: #efefef;
+      }
+
+      .container-fluid:nth-of-type(even){
+        background-color: #ffffff;
+      }
+      .container-fluid, .container{
+        padding: 2%;
+      }
+      .carousel-content {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        color: white;
+        font-size: 72px;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+      }
+      .carousel,.item,.active{
+         height:100%;
+       }
+      .carousel-inner{
+          height:100%;
+      }
+    </style>
+  </head>
+
+  <!-- The scrollable area -->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+     <ul class="navbar-nav">
+       <li style="color: #fff">Morgan Oneka</li>
+       <li><a href="#home">Home</a></li>
+       <li><a href="#mywork">Current Work</a></li>
+       <li><a href="#publications">Publications</a></li>
+       <li><a href="#presentations">Presentations</a></li>
+       <li><a href="#teaching">Teaching</a></li>
+       <!-- <li><a href="travel.html">Travel</a></li> -->
+     </ul>
+    </nav>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:100%; height:100%">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <img class="d-block w-100" src="images/adrien-converse-xzH7K6nVVgI-unsplash.jpg" alt="First slide">
+          </div>
+          <div class="carousel-caption">
+        <h3 class="h3-responsive">Light mask</h3>
+        <p>First text</p>
+      </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <img class="d-block w-100" src="images/chris-liverani-dBI_My696Rk-unsplash.jpg" alt="First slide">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <img class="d-block w-100" src="images/markus-spiske-qjnAnF0jIGk-unsplash.jpg" alt="First slide">
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="container-fluid">
+      <div id="home" class="row">
+        <div class="col-sm-3">
+           <img class="img-fluid rounded-circle" src="images/ughitsme.JPG" alt="A picture of me">
+           <a class="btn btn-social-icon btn-twitter">
+            <span class="fa fa-twitter"></span>
+          </a>
+          <a class="btn btn-social-icon btn-github">
+           <span class="fa fa-github"></span>
+         </a>
+         <a class="btn btn-social-icon btn-linkedin">
+          <span class="fa fa-linkedin"></span>
+        </a>
+        </div>
+        <div class="col-sm-9">
+          <h1>About Me</h1>
+          <p>Hey! My name is Morgan. I'm a 2nd year PhD student in the Department of Computational Medicine and Bioinformatics at the University of Michigan. I study how methods from GIS, spatial statistics, and graph theory/network science can be used to quantify spatial relationships in a biological setting. Most of my work involves applying these methods to tumor samples (usually H&E slides or immunohistochemistry stains), but I also look at spatial transcriptomics data in a variety of settings. </p>
+          <p>I'm actually a Michigan native! I was born in Muskegon, and I received my BS in Math & Computer Science from Grand Valley State University. </p>
+          <p>One of my favorite parts of science is science communication. I love presenting my work (even though presenting in front of large groups of people is still a bit intimidating!), writing about science, and teaching others.</p>
+          <p>When I'm not in the lab, I enjoy creative writing and playing piano & guitar. I also love to travel—the photo of the left is of me in the Distillery District in Toronto!</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+      <div id="mywork" class="row">
+        <div class="col-sm-3"> <h1>Research Interests</h1>
+        <p>Blah blah blah </p></div>
+        <div class="col-sm-9">
+          <div class="table-responsive">
+           <table class="table">
+             <tbody>
+               <tr>
+                <th style="width: 25%">some kind of small icon thing</th>
+                <th style="width: 75%">
+                  <h2>How can we borrow concepts from GIS and network science to quantify spatial arrangement of entities in a biological setting?</h2>
+                  <p>I've done it before, it was cool, but how can it be b e t t e r???</p>
+                </th>
+               </tr>
+               <tr>
+                <th style="width: 25%">some kind of small icon thing</th>
+                <th style="width: 75%">
+                  <h2>How does tumor microenvironment composition impact patient outcome?</h2>
+                  <p>Explanation</p>
+                </th>
+               </tr>
+               <tr>
+                <th style="width: 25%">some kind of small icon thing</th>
+                <th style="width: 75%">
+                  <h2>What causes differences in tumor microenvironment?</h2>
+                  <p>Genomics, rna seq, proteomics, mutations, etc...</p>
+                </th>
+               </tr>
+             </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+      <div id="publications" class="row">
+        <div class="col-sm-3"> <h1>Publications</h1>
+        <p>Blah blah blah </p></div>
+        <div class="col-sm-9">
+          <div class="table-responsive">
+           <table class="table">
+             <tbody>
+               <tr>
+                <th style="width: 25%">some kind of small icon thing</th>
+                <th style="width: 75%">Things</th>
+               </tr>
+               <tr>
+                <th style="width: 25%">some kind of small icon thing</th>
+                <th style="width: 75%">Things</th>
+               </tr>
+               <tr>
+                <th style="width: 25%">some kind of small icon thing</th>
+                <th style="width: 75%">Things</th>
+               </tr>
+             </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="presentations" class="row">
+        <div class="col-sm-3"> <h1>Presentations</h1>
+        <p>Ye sometimes I talk about things</p></div>
+        <tr>
+         <th style="width: 25%">
+           <h1>Women in Data Science</h1>
+           <p>East Lansing, MI</p>
+           <p>April 12, 2019</p>
+          </th>
+         <th style="width: 75%">
+           <div class="embed-responsive embed-responsive-16by9">
+             <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSPrTzSRwhf4t6wNHX8Mchl07xpkZ1FMJHPpl262hb2tPEQLZfbIvBVrr4fPS41JszyOjHBQTOkmPyO/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+           </div>
+         </th>
+        </tr>
+        <tr>
+         <th style="width: 25%">some kind of small icon thing</th>
+         <th style="width: 75%">Things</th>
+        </tr>
+      </div>
+    </div>
+
+    <!-- <br>
+
+    <div class="container-fluid">
+
+    </div> -->
+
+    <br>
+
+    <div class="container-fluid">
+      <div id="teaching" class="row">
+        <div class="col-sm-3"> <h1>Teaching</h1>
+        <p>I like teaching and here is some of the teaching I have done in my life </p></div>
+        <div class="col-sm-3"> <p>blah blah blah</p></div>
+        <div class="col-sm-3"> <p>blah blah blah</p></div>
+        <div class="col-sm-3"> <p>blah blah blah</p></div>
+      </div>
+    </div>
+  </body>
+</html>

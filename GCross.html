@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Barriecito|Lacquer&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/modified.css">
+  </head>
+
+  <!-- The scrollable area -->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+     <ul class="navbar-nav">
+       <li>Morgan Oneka</li>
+       <li><a href="#home">Home</a></li>
+       <li><a href="#teaching">Teaching</a></li>
+     </ul>
+    </nav> -->
+
+    <div class="container-fluid">
+      <div class="col-sm-12 bg-secondary">
+        <h1>How the G-Cross Characterizes Immune Cell Infiltration</h1>
+      </div>
+      <figure class="figure float-left w-25">
+          <img src="images/explaingcross/high_xy.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+          <figcaption class="figure-caption">A tumor sample with high infiltration of CTLs into tumor tissue—that is, the CTLs and tumor cells are spatially close to one another.</figcaption>
+          <img src="images/explaingcross/low_xy.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+          <figcaption class="figure-caption">A tumor sample with low infiltration of CTLs into tumor tissue. In this sample, we see that the CTLs and tumor cells are segregated into two seperate populations.</figcaption>
+      </figure>
+
+      <div class="col-sm-12">
+        <h2>Cancer Cell Infiltration</h2>
+         <!-- <img class="float-left w-25" src="images/explaingcross/high_xy.png" alt="Chania">  -->
+         <p>Cytotoxic T-cells, or CTLs, are also known as "killer T-cells" and play a major role in killing abnormal cells, including tumor cells. </p>
+         <p>Then, when CTLs are physically close to tumor cells, we can infer that this will lead to a positive outcome for the patient, because the CTL will kill many of the tumor cells. We call this infiltration—the CTLs have infiltrated the tumor cells, meaning the two populations of cells are intertwined.</p>
+         <p>To the left are plots of two different samples. Sample 1 has high infiltration of CTLs into tumor cells; the CTLs and tumor cells are mixed together fairly evenly. Sample 2 has low infiltration; while there are some tumor cells that have CTLs near them, most tumor cells do not have a CTL nearby, as the CTLs have clustered together in one area of the sample.</p>
+         <p>This is a phenomenon we can see easily with the naked eye. But how quantify the level of infiltration objectively?</p>
+      </div>
+
+      <div class="col-sm-12">
+        <h2>What is the G-Cross Function?</h2>
+        <p>The G-Cross function is a function of a radius, R. The function returns the probability that a reference cell has a non-reference cell within R units of it.</p>
+        <p>In the context of CTLs and tumors, G(R) gives the probability that a tumor has a CTL within R units.</p>
+      </div>
+
+      <div class="col-sm-12">
+        <h2>Calculating the G-Cross over Many Radii</h2>
+        <p>This can give us an idea of how density varies over a distance</p>
+      </div>
+
+      <div class="col-sm-12">
+        <h2>Area Under the Curve</h2>
+        <p>These curves are cool, but having 300 different points isn't great. We can summarize this using ~AUC~</p>
+      </div>
+
+      <div class="col-sm-12">
+        <h2>As a Predictive Tool</h2>
+        <p>Previous publications have shown ........ </p>
+      </div>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Barriecito|Lacquer&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+      html,body{
+        height:100%;
+      }
+      .container, .container-fluid{
+        min-height:100%;
+        overflow:hidden;
+      }
+      #col1, #col2, #col3 {
+        margin-bottom: -9999px;
+        padding-bottom: 9999px;
+      }
+      .navbar li{
+        padding-left: 10px;
+        text-transform: lowercase;
+        /* font-family: 'Share Tech Mono', monospace; */
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        /* font-family: 'Share Tech Mono', monospace; */
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: bolder;
+        text-transform: lowercase
+      }
+      .container-fluid:nth-of-type(odd){
+        background-color: #efefef;
+      }
+
+      .container-fluid:nth-of-type(even){
+        background-color: #ffffff;
+      }
+      .container-fluid, .container{
+        padding: 2%;
+      }
+      .carousel-content {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        color: white;
+        font-size: 72px;
+        text-shadow: 0 1px 2px rgba(0,0,0,.6);
+      }
+      .carousel,.item,.active{
+         height:100%;
+       }
+      .carousel-inner{
+          height:100%;
+      }
+      .right{
+        text-align: right
+      }
+    </style>
+  </head>
+
+  <!-- The scrollable area -->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+     <ul class="navbar-nav">
+       <li style="color: #fff">Morgan Oneka</li>
+       <li><a href="#home">Home</a></li>
+       <li><a href="#mywork">Research Interests</a></li>
+       <li><a href="#publications">Publications & Presentations</a></li>
+       <li><a href="#teaching">Teaching</a></li>
+       <!-- <li><a href="travel.html">Travel</a></li> -->
+     </ul>
+    </nav>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:100%; height:100%">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <img class="d-block w-100" src="images/retreat.jpg" alt="DCMB retreat">
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">DCMB Retreat</h3>
+            <p>I had such a blast at my department's annual retreat! This year, we visited Maumee State Park in Oregon, Ohio. I had a great time catching up with old friends, meeting some of the new students, and learning about my colleague's exciting research.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <img class="d-block w-100" src="images/crc_project.jpg" alt="Immunohistochemistry">
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Predicting patient outcome in colorectal cancer</h3>
+            <p>In my first ever co-authored scientific paper, we use mathematics to quantify the infiltration of cytotoxic T-cells into cancerous cells, and show that this is a predictor of patient outcome. Check it out <a href="https://doi.org/10.1245/s10434-019-07508-3">here</a>!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex align-items-center justify-content-center min-vh-100">
+            <img class="d-block w-100" src="images/lazertag.JPG" alt="Laser tag">
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Fun with the labmates</h3>
+            <p>To celebrate the end of a great semester, some of my labmates and I enjoyed a few good rounds of laser tag! Note: I am not very good at laser tag.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="container-fluid">
+      <div id="home" class="row">
+        <div class="col-sm-3">
+           <img class="img-fluid rounded-circle" src="images/ughitsme.JPG" alt="A picture of me">
+           <center>
+            <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/morganoneka">
+              <span class="fa fa-twitter"></span>
+            </a>
+            <a class="btn btn-social-icon btn-github" href="https://github.com/morganoneka/">
+             <span class="fa fa-github"></span>
+            </a>
+            <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/morganoneka/">
+              <span class="fa fa-linkedin"></span>
+            </a>
+          </center>
+        </div>
+        <div class="col-sm-9">
+          <h1>About Me</h1>
+          <p>Hey there! My name is Morgan. I'm a 2nd year PhD student in the Department of Computational Medicine and Bioinformatics at the University of Michigan. I study how methods from GIS, spatial statistics, and graph theory/network science can be used to quantify spatial relationships in a biological setting. Most of my work involves applying these methods to tumor samples (usually H&E slides or immunohistochemistry stains), but I also look at spatial transcriptomics data in a variety of settings. </p>
+          <p>My favorite part of my work is that I get to answer exciting questions in biology and medicine. While I love writing code and doing math, knowing that my work helps increase the understanding of how the immune system reacts to cancer or how stem cells differentiate keeps me motivated and excited about my work!</p>
+          <p>One of my favorite parts of science is science communication. I love presenting my work (even though presenting in front of large groups of people is still a bit intimidating!), writing about science, and teaching others.</p>
+          <p>Fun fact: I'm actually a Michigan native! I was born and raised in Muskegon, and I received my BS in Mathematics & Computer Science from Grand Valley State University. </p>
+          <p>When I'm not in the lab, I enjoy creative writing and playing piano & guitar. I also love to travel—the photo of the left is of me in the Distillery District in Toronto!</p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+      <div id="mywork" class="row">
+        <div class="col-sm-3 right"> <h1>Research Interests</h1>
+        <p class="right">My goal for my research is to use my love of mathematics and my skills in programming to solve pressing health problems. This is pretty broad, so I've listed a few of the specific problems I am currently working on!</p></div>
+        <div class="col-sm-9">
+          <div class="table-responsive">
+           <table class="table">
+             <tbody>
+               <tr>
+                <th style="width: 25%"><img class="img-fluid" src="images/ctlheatmap.png" alt="A heatmap"></th>
+                <th style="width: 75%">
+                  <h2>How can we borrow concepts from GIS and network science to quantify spatial arrangement of entities in a biological setting?</h2>
+                  <p>Cell-cell interaction can be inferred using spatial imaging data. Fields such as GIS and network science offer a variety of methods to quantify spatial relationships. </p>
+                </th>
+               </tr>
+               <tr>
+                <th style="width: 25%"><img class="img-fluid" src="images/spatial1.png" alt="Spatial transcriptomics visualization"></th>
+                <th style="width: 75%">
+                  <h2>How can we use molecular imaging data to infer gene and protein interaction networks?</h2>
+                  <p>Interaction networks have been created from sequencing data, as well as from single-gene ISH images. But how can we use multiplexed images, such as spatial transcriptomics or immunohistochemistry, to better understand how genes and proteins interact with one another?</p>
+                </th>
+               </tr>
+             </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+      <div id="publications" class="row">
+        <div class="col-sm-3 right"> <h1>Publications & Presentations</h1>
+        </div>
+        <div class="col-sm-9">
+          <div class="table-responsive">
+           <table class="table">
+             <tbody>
+               <tr>
+                 <th><h2>Publications</h2></th>
+               </tr>
+               <tr>
+                <td>Lazarus, J., Oneka, M. D., Barua, S., et al. (2019). Mathematical Modeling of the Metastatic Colorectal Cancer Microenvironment Defines the Importance of Cytotoxic Lymphocyte Infiltration and Presence of PD-L1 on Antigen Presenting Cells. Annals of Surgical Oncology, 26(9), 2821–2830.<br>
+                 <a href="https://doi.org/10.1245/s10434-019-07508-3" class="btn btn-primary btn-sm" role="button">Link</a>
+                </td>
+               </tr>
+               <tr>
+                 <th style="width: 100%"><h2>Presentations</h2>
+               </tr>
+               <tr>
+                <td>
+                  "Characterizing Tumor Microenvironments using a Multidisciplinary Approach". Women in Data Science: East Lansing. East Lansing, MI, April 12, 2019.<br>
+                  <a href="https://docs.google.com/presentation/d/1Rbvj5Et_MllXR-Q-RVxbz547Mnex92KspvLDyn2COeE/edit?usp=sharing" class="btn btn-primary btn-sm" role="button">Lightning Talk</a>
+                  <a href="https://docs.google.com/presentation/d/1JiwPfaICvS451-uB6i5fn4Pki_31_IrSkEmvc4IsMSk/edit?usp=sharing" class="btn btn-primary btn-sm" role="button">Poster</a>
+                </td>
+               </tr>
+               <tr>
+                 <td>
+                   "King of the Coop:  A Graphical Investigation of Chicken Pecking Orders". The 2018 Joint Mathematics Meetings. San Diego, CA. January 10-13 2018.<br>
+                   <a href="https://drive.google.com/file/d/1Q-w3I2a31wSYQu2AtITfd4o_5uFxMHbv/view?usp=sharing" class="btn btn-primary btn-sm" role="button">Poster</a>
+                   <a href="https://www.maa.org/sites/default/files/Programs/WelcomeLetterJMM2018.docx.pdf" class="btn btn-primary btn-sm" role="button">Outstanding Poster List</a>
+                  </td>
+               </tr>
+             </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+      <div id="teaching" class="row">
+        <div class="col-sm-3 right"> <h1>Teaching</h1>
+        <p class="right">I really enjoy sharing my love of math and CS with others. These are some of my experiences teaching others. </p></div>
+        <div class="col-sm-3">
+          <img class="img-fluid" src="images/carpentries.png" alt="The Carpentries logo">
+          <p>As of August 2019, I am a certified <a href="https://carpentries.org/">Carpentries</a> instructor! I have also helped out at one Software Carpentries workshop, and will be teaching a lesson on Unix during a workshop in October.</p>
+        </div>
+        <div class="col-sm-3">
+          <img class="img-fluid" src="images/gwcsquare.png" alt="The GWC logo">
+          <p>I am an executive committee member of <a href="http://www.umich.edu/~girlswc/index.html">my department's chapter of Girls Who Code</a>. I first became involved after serving as a facilitator for our week-long <a href="http://www.umich.edu/~girlswc/summer.html">Data Science Summer Experience in Detroit</a>. Now, in addition to helping with the club website, I am part of the curriculum planning committe for our year-long club.</p>
+        </div>
+        <div class="col-sm-3">
+          <img class="img-fluid" src="images/bitcamp.png" alt="The BitCamp GR logo">
+          <p>During my time at GVSU, I volunteered at several <a href="http://bitcamp.softwaregr.org/">BitCamp GR</a> day camps, where I helped teach middle school girls how to code in HTML and CSS.</p>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+          <img class="img-fluid" src="images/mathstatssquare.png" alt="GVSU Math/Stats logo">
+          <p>I worked for two years at GVSU's Math and Stats tutoring center. I helped in a variety of classes, from introduction to statistics and geometry to mathematical statistics and abstract algebra.</p>
+        </div>
+        <div class="col-sm-3">
+          <img class="img-fluid" src="images/cissquare.png" alt="GVSU CIS logo">
+          <p>For three semesters, I worked as a lab assistant for my school's first-semester programming class, CIS 162, where I helped facilitate two-hour labs for students learning Java. I also was a grader for GVSU's computer architecture course for one semester.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

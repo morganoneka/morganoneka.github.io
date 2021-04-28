@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Barriecito|Lacquer&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/mine.css"  />
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+
+  <style>
+    .box {
+      float: right;
+      height: 20px;
+      width: 20px;
+      clear: both;
+    }
+    .work {
+      background-color: red;
+    }
+    .personal {
+      background-color: green;
+    }
+    .code {
+      background-color: blue;
+    }
+    .pub{
+      background-color: yellow;
+    }
+    </style>
+</head>
+
+<body>
+
+<div id="#test">hi</div>
+
+  <div class="container-fluid">
+    <div id="projects">
+      <div class="row myrow">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    class Project{
+      constructor(title, description, work=false, personal=false, code=false, pub=false){
+        this.title = title;
+        this.description = description;
+        this.work = work;
+        this.personal = personal;
+        this.code = code;
+        this.pub = pub;
+      }
+    }
+
+    data = [new Project("Test", "Descr",code=true,work=true,pub=true), new Project("T2", "Blah")];
+    var i;
+    for (i = 0; i < data.length; i++){
+
+      square_data = "";
+
+      if (data[i].work){
+        square_data = square_data.concat("<div class='box work'></div><br>");
+      }
+      if (data[i].personal){
+        square_data = square_data.concat("<div class='box personal'></div><br>");
+      }
+      if (data[i].code){
+        square_data = square_data.concat("<div class='box code'></div><br>");
+      }
+      if (data[i].pub){
+        square_data = square_data.concat("<div class='box pub'></div><br>");
+      }
+
+      text_html = "<h2>".concat(data[i].title, "</h2><p>", data[i].description, "</p>");
+      output_html = '<div class="row"><div class="col-3">'.concat(square_data ,'</div><div class="col-9">',text_html,'</div></div>');
+
+      if (i % 2 === 0){
+        d3.select("#projects").append("div").attr("class", "row myrow");
+
+        var most_recent_row = d3.select("#projects").selectAll(".myrow").filter(function(d, i,list) {
+        return i === list.length - 1;
+      });
+        most_recent_row.append("div").attr("class", "col-md-1");
+        most_recent_row.append("div").attr("class", "col-md-4").html(output_html);
+
+      } else{
+        var most_recent_row = d3.select("#projects").selectAll(".myrow").filter(function(d, i,list) {
+        return i === list.length - 1;
+      });
+        most_recent_row.append("div").attr("class", "col-md-1");
+        most_recent_row.append("div").attr("class", "col-md-4").html(output_html);
+        most_recent_row.append("div").attr("class", "col-md-1");
+      }
+    }
+
+
+    // https://stackoverflow.com/questions/25405359/how-can-i-select-last-child-in-d3-js
+    // x = d3.select("#projects").selectAll(".row").filter(function(d, i,list) {
+    // return i === list.length - 1;
+    // }).selectAll(".col-md-4").text("Hello");
+
+    // d3.select("#test").text(x);
+    // console.log(x);
+  </script>
+  </body>
+  </html>

@@ -1,82 +1,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Barriecito|Lacquer&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <style>
-      html,body{
-        height:100%;
-      }
-      .container, .container-fluid{
-        min-height:100%;
-        overflow:hidden;
-      }
-      #col1, #col2, #col3 {
-        margin-bottom: -9999px;
-        padding-bottom: 9999px;
-      }
-      .navbar li{
-        padding-left: 10px;
-        text-transform: lowercase;
-        font-family: 'Share Tech Mono', monospace;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Share Tech Mono', monospace;
-        text-transform: lowercase
-      }
-      .container-fluid:nth-of-type(odd){
-        background-color: #efefef;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Barriecito|Lacquer&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/mine.css"  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
 
-      .container-fluid:nth-of-type(even){
-        background-color: #ffffff;
-      }
-      .container-fluid, .container{
-        padding: 2%;
-      }
-      .carousel-content {
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 20;
-        color: white;
-        font-size: 72px;
-        text-shadow: 0 1px 2px rgba(0,0,0,.6);
-      }
+  <style>
+    #mapid { height: 180px; }
     </style>
-  </head>
 
-  <!-- The scrollable area -->
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-     <ul class="navbar-nav">
-       <li style="color: #fff">Morgan Oneka</li>
-       <li><a href="#home">Home</a></li>
-       <li><a href="#mywork">Current Work</a></li>
-       <li><a href="#publications">Publications</a></li>
-       <li><a href="#presentations">Presentations</a></li>
-       <li><a href="#teaching">Teaching</a></li>
-     </ul>
-    </nav>
+</head>
 
-    <div class="container-fluid">
-      <div id="home" class="row">
-        
-      </div>
-    </div>
 
+  <body>
+   <div id="mapid"></div>
+   <script>
+     var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+   maxZoom: 18,
+   id: 'mapbox/streets-v11',
+   tileSize: 512,
+   zoomOffset: -1,
+   accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+     </script>
   </body>
 </html>

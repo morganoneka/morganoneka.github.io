@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/mine.css"  />
+  <script src="https://kit.fontawesome.com/131191e809.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col bg-nav min-vh-100" id="nav-placeholder">
+
+      </div>
+      <div class="col-10 min-vh-100">
+        <h1>My Portfolio</h1>
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-10" style="margin-top:10px">
+              <h2>Bioinformatics Projects</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 proj-profile">
+              <h2>DiNeR</h2>
+              <p>(<b>Di</b>fferential <b>Ne</b>twork Visualization in <b>R</b>) - a visualization library for <premph>R</premph> that facilitates insightful comparisons among multiple networks. </p>
+              <p>Available <a href="https://github.com/morganoneka/DiNeR">here</a></p>
+            </div>
+            <div class="col-md-5 proj-profile offset-1">
+              <h2>GCN Downstream</h2>
+              <p>A collection of scripts written in <premph>R</premph> that analyzes topological differences in genetic co-expression networks and more easily analyzes trends in downstream DAVID analysis. </p>
+
+              <p>Available <a href="https://github.com/morganoneka/GCNDownstream">here</a></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 proj-profile">
+              <h2>ICG Downstream</h2>
+                <p>A collection of functions in <premph>R</premph> that assists in parsing and analyzing output from Giotto's Interaction Changed Genes functionality. </p>
+
+                <p>Available <a href="https://github.com/morganoneka/ICGDownstream">here</a></p>
+            </div>
+            <div class="col-md-5 proj-profile offset-1">
+              <h2>G Function Analysis</h2>
+              <p>A series of <premph>R</premph> scripts, stitched together using a convenient <premph>snakemake</premph> pipeline, that analyzes and visualizes cell pair interactions based on the G-Function curve frequently used in ecology. This robust code package is often used by myself and my labmates. </p>
+
+              <p>Available <a href="https://github.com/morganoneka/GFunctionAnalysis">here</a></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10" style="margin-top:10px">
+              <h2>Personal Projects</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 proj-profile">
+              <h2>Music Complexity Analysis</h2>
+              <p>Has music actually gotten simpler over the years? I investigate this, and much more, in this project using data from <a href="ultimate-guitar.com/">Ultimate Guitar</a> and <a href="https://www.last.fm/">Last.FM</a>. Web scraping with <premph>Beautiful Soup</premph> and interactive visualization using <premph>APEX charts</premph>.</p>
+              <p>Available <a href="https://morganoneka.github.io/UltimateGuitarAnalysis/">here</a></p>
+            </div>
+            <div class="col-md-5 proj-profile offset-1">
+              <h2>Music Practice</h2>
+              <p>Visualization of my practice history with the goal of identifying trends and making it easier to set & achieve my practice goals. Implemented using <premph>d3.js</premph> and <premph>plotly.js</premph>.</p>
+              <p>Available <a href="https://morganoneka.github.io/MusicPractice/">here</a></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 proj-profile">
+              <h2>US Surnames</h2>
+              <p>A basic web page which uses <premph>d3.js</premph> to more easily visualize, filter, and search US Census data on surname usage.</p>
+              <p>Available <a href="https://morganoneka.github.io/names/">here</a></p>
+            </div>
+            <div class="col-md-5 proj-profile offset-1">
+              <h2>Reddit + MBTI</h2>
+              <p>Does Reddit usage differ across personality types as defined by Myer Briggs Type Indicator? Using Kaggle data plus Subreddit classification info I scraped from <a href="https://www.findareddit.com/">Find A Reddit</a>, I investigate this.</p>
+
+              <p>Web scraping process available <a href="https://github.com/morganoneka/SubredditInfoScraping">here</a>. Analysis coming soon to Kaggle.</p>
+            </div>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col-md-5 proj-profile">
+              <h2>Song Generation</h2>
+              <p>Using Markov Chains created in the Music Complexity Analysis project, this project randomly generates song structure and chord progression using some basic <premph>JavaScript</premph>.</p>
+
+              <p>Coming soon!</p>
+            </div>
+            <div class="col-md-5 proj-profile offset-1">
+              x
+            </div>
+          </div> -->
+        </div>
+      </div>
+  </div>
+  </div>
+
+<script>
+$(function(){
+$("#nav-placeholder").load("nav.html");
+});
+</script>
+</body>
+</html>

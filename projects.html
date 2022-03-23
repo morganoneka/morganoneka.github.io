@@ -40,12 +40,28 @@
 
 <body>
 
-<div id="#test">hi</div>
+<div id="#test">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active">
+      <input type="radio" name="options" id="button-all" autocomplete="off" checked> All Projects
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" id="button-work" autocomplete="off"> Work
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" id="button-personal" autocomplete="off"> Personal
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" id="button-code" autocomplete="off"> Code
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" id="button-pub" autocomplete="off"> Publications
+    </label>
+  </div>
+</div>
 
   <div class="container-fluid">
     <div id="projects">
-      <div class="row myrow">
-      </div>
     </div>
   </div>
 
@@ -61,55 +77,82 @@
       }
     }
 
-    data = [new Project("Test", "Descr",code=true,work=true,pub=true), new Project("T2", "Blah")];
-    var i;
-    for (i = 0; i < data.length; i++){
+    function make_table(data){
+      var i;
+      for (i = 0; i < data.length; i++){
 
-      square_data = "";
+        square_data = "";
 
-      if (data[i].work){
-        square_data = square_data.concat("<div class='box work'></div><br>");
-      }
-      if (data[i].personal){
-        square_data = square_data.concat("<div class='box personal'></div><br>");
-      }
-      if (data[i].code){
-        square_data = square_data.concat("<div class='box code'></div><br>");
-      }
-      if (data[i].pub){
-        square_data = square_data.concat("<div class='box pub'></div><br>");
-      }
+        if (data[i].work){
+          square_data = square_data.concat("<div class='box work'></div><br>");
+        }
+        if (data[i].personal){
+          square_data = square_data.concat("<div class='box personal'></div><br>");
+        }
+        if (data[i].code){
+          square_data = square_data.concat("<div class='box code'></div><br>");
+        }
+        if (data[i].pub){
+          square_data = square_data.concat("<div class='box pub'></div><br>");
+        }
 
-      text_html = "<h2>".concat(data[i].title, "</h2><p>", data[i].description, "</p>");
-      output_html = '<div class="row"><div class="col-3">'.concat(square_data ,'</div><div class="col-9">',text_html,'</div></div>');
+        text_html = "<h2>".concat(data[i].title, "</h2><p>", data[i].description, "</p>");
+        output_html = '<div class="row"><div class="col-3">'.concat(square_data ,'</div><div class="col-9">',text_html,'</div></div>');
 
-      if (i % 2 === 0){
-        d3.select("#projects").append("div").attr("class", "row myrow");
+        if (i % 2 === 0){
+          d3.select("#projects").append("div").attr("class", "row myrow");
 
-        var most_recent_row = d3.select("#projects").selectAll(".myrow").filter(function(d, i,list) {
-        return i === list.length - 1;
-      });
-        most_recent_row.append("div").attr("class", "col-md-1");
-        most_recent_row.append("div").attr("class", "col-md-4").html(output_html);
+          var most_recent_row = d3.select("#projects").selectAll(".myrow").filter(function(d, i,list) {
+          return i === list.length - 1;
+        });
+          most_recent_row.append("div").attr("class", "col-md-1");
+          most_recent_row.append("div").attr("class", "col-md-4").html(output_html);
 
-      } else{
-        var most_recent_row = d3.select("#projects").selectAll(".myrow").filter(function(d, i,list) {
-        return i === list.length - 1;
-      });
-        most_recent_row.append("div").attr("class", "col-md-1");
-        most_recent_row.append("div").attr("class", "col-md-4").html(output_html);
-        most_recent_row.append("div").attr("class", "col-md-1");
+        } else{
+          var most_recent_row = d3.select("#projects").selectAll(".myrow").filter(function(d, i,list) {
+          return i === list.length - 1;
+        });
+          most_recent_row.append("div").attr("class", "col-md-1");
+          most_recent_row.append("div").attr("class", "col-md-4").html(output_html);
+          most_recent_row.append("div").attr("class", "col-md-1");
+        }
       }
     }
 
+    data = [
+      new Project("Test", "Descr",work=true,personal=false,code=true,pub=true),
+      new Project("T2", "Blah",work=true,personal=false,code=false,pub=true),
+      new Project("Cool Project", "Description very interesting",work=false,personal=true,code=true,pub=false)];
 
-    // https://stackoverflow.com/questions/25405359/how-can-i-select-last-child-in-d3-js
-    // x = d3.select("#projects").selectAll(".row").filter(function(d, i,list) {
-    // return i === list.length - 1;
-    // }).selectAll(".col-md-4").text("Hello");
 
-    // d3.select("#test").text(x);
-    // console.log(x);
+      // make_table(data);
+
+    function hasCode(project){
+      return project.code;
+    }
+
+
+
+    /// TODO: not working
+    d3.select("button-code").on("click", function(){
+      // clear projects
+
+      d3.select("#projects").html("");
+      data_code = data.filter(hasCode);
+      make_table(data_code);
+    });
+
+    // d3.selectAll(".work").on("mouseover", function(){
+    //   this.append("div").html("Hello<br/>"  + d.close)
+    //             .style("left", (d3.event.pageX) + "px")
+    //             .style("top", (d3.event.pageY - 28) + "px");
+    //         })
+    // .on("mouseout", function(){
+    //       d3.select(this)
+    //         .style("background-color", "red")
+    //   });
+
+    make_table(data);
   </script>
   </body>
   </html>

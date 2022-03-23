@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Barriecito|Lacquer&display=swap" rel="stylesheet"> -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,123 +15,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./css/mine.css"  />
+  <script src="https://kit.fontawesome.com/131191e809.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- The scrollable area -->
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-
-  <!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-   <ul class="navbar-nav">
-     <li style="color: #fff">Morgan Oneka</li>
-     <li><a href="#home">Home</a></li>
-     <li><a href="#research">Research Interests</a></li>
-     <li><a href="#projects">Projects</a></li>
-     <!-- <li><a href="#publications">Publications & Presentations</a></li> -->
-     <!-- <li><a href="#teaching">Teaching</a></li> -->
-     <!-- <li><a href="travel.html">Travel</a></li> -->
-   </ul>
-  </nav>
-
-  <br><br>
-
+<body>
   <div class="container-fluid">
-    <div id="home" class="row">
-      <div class="col-sm-3">
-         <img class="img-fluid rounded-circle" src="images/ughitsme.JPG" alt="A picture of me">
-         <center>
-          <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/morganoneka">
-            <span class="fa fa-twitter"></span>
-          </a>
-          <a class="btn btn-social-icon btn-github" href="https://github.com/morganoneka/">
-           <span class="fa fa-github"></span>
-          </a>
-          <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/morganoneka/">
-            <span class="fa fa-linkedin"></span>
-          </a>
-        </center>
+    <div class="row flex-nowrap">
+      <div class="col bg-nav min-vh-100" id="nav-placeholder">
+
       </div>
-      <div class="col-sm-9">
-        <h1>About Me</h1>
-        <p>Hey there! My name is Morgan. I'm a 3rd year PhD candidate in the Department of Computational Medicine and Bioinformatics at the University of Michigan. I study how methods from GIS, spatial statistics, and graph theory/network science can be used to quantify spatial relationships in a biological setting. Most of my work involves applying these methods to tumor samples (usually H&E slides or immunohistochemistry stains), but I also look at spatial transcriptomics data in a variety of settings. </p>
-        <p>My favorite part of my work is that I get to answer exciting questions in biology and medicine. While I love writing code and doing math, knowing that my work helps increase the understanding of how the immune system reacts to cancer or how stem cells differentiate keeps me motivated and excited about my work!</p>
-        <p>Fun fact: I'm actually a Michigan native! I was born and raised in Muskegon, and I received my BS in Mathematics & Computer Science from Grand Valley State University. </p>
-        <p>When I'm not in the lab, I enjoy creative writing and playing piano & guitar. I also love to travel—the photo of the left is of me in the Distillery District in Toronto!</p>
+      <div class="col-9 min-vh-100">
+        <h1>Welcome!</h1>
+        <p>My name is Morgan, and I'm passionate about data storytelling. I've spent the last four years developing tools to quantify trends in spatial biological data, helping colleagues in biology and medicine learn more about human disease.</p>
+
+        <p>In my spare time, I enjoy music and creative writing. I also like to travel, especially to places where I can eat good food or go on a scenic hike!</p>
       </div>
-    </div>
   </div>
-
-  <br>
-
-  <!--- Research Interests --->
-  <div class="container-fluid">
-    <div id="research" class="row">
-      <div class="col-sm-3 right"> <h1>Research Interests</h1>
-      <p class="right">My goal for my research is to use my love of mathematics and my skills in programming to solve pressing health problems. This is pretty broad, so I've listed a few of the specific problems I am currently working on!</p></div>
-      <div class="col-sm-9">
-        <div class="table-responsive">
-         <table class="table">
-           <tbody>
-             <tr>
-              <th style="width: 25%"><img class="img-fluid" src="images/ctlheatmap.png" alt="A heatmap"></th>
-              <th style="width: 75%">
-                <h2>How can we borrow concepts from GIS and network science to quantify spatial arrangement of entities in a biological setting?</h2>
-                <p>Cell-cell interaction can be inferred using spatial imaging data. Fields such as GIS and network science offer a variety of methods to quantify spatial relationships. </p>
-              </th>
-             </tr>
-             <tr>
-              <th style="width: 25%"><img class="img-fluid" src="images/spatial1.png" alt="Spatial transcriptomics visualization"></th>
-              <th style="width: 75%">
-                <h2>How can we use molecular imaging data to infer gene and protein interaction networks?</h2>
-                <p>Interaction networks have been created from sequencing data, as well as from single-gene ISH images. But how can we use multiplexed images, such as spatial transcriptomics or immunohistochemistry, to better understand how genes and proteins interact with one another?</p>
-              </th>
-             </tr>
-           </tbody>
-         </table>
-        </div>
-      </div>
-    </div>
   </div>
-  <br>
-
-  <!--- Projects --->
-  <div class="container-fluid">
-    <div id="projects" class="row">
-      <div class="col-sm-3 right"> <h1>Projects</h1>
-      <p class="right">Here is some of the code I've written! Some of it is related to my research, and some of it is work I've done on the side.</p></div>
-      <div class="col-sm-9">
-        <div class="table-responsive">
-         <table class="table">
-           <tbody>
-             <tr>
-              <th style="width: 25%"><img class="img-fluid" src="images/ctlheatmap.png" alt="A heatmap"></th>
-              <th style="width: 75%">
-                <h2>Spatial Data Toolbox</h2>
-                <p>Basic scripts for working with spatial biological data, such as multiplexed immunohistochemistry and spatial transcriptomics. </p>
-              </th>
-             </tr>
-             <tr>
-              <th style="width: 25%"><img class="img-fluid" src="images/spatial1.png" alt="Spatial transcriptomics visualization"></th>
-              <th style="width: 75%">
-                <h2>Differential Network Visualization</h2>
-                <p>(Description)</p>
-              </th>
-             </tr>
-             <tr>
-              <th style="width: 25%"><img class="img-fluid" src="images/spatial1.png" alt="Spatial transcriptomics visualization"></th>
-              <th style="width: 75%">
-                <h2>Music Practice Viz</h2>
-                <p>(Description)</p>
-              </th>
-             </tr>
-           </tbody>
-         </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-
-
-    </body>
+<script>
+$(function(){
+$("#nav-placeholder").load("nav.html");
+});
+</script>
+</body>
 </html>

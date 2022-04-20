@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
@@ -34,12 +34,12 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-5 proj-profile">
+            <div class="col-md-5 proj-profile mr-2 mb-2">
               <h2>DiNeR</h2>
               <p>(<b>Di</b>fferential <b>Ne</b>twork Visualization in <b>R</b>) - a visualization library for <premph>R</premph> that facilitates insightful comparisons among multiple networks. </p>
               <p>Available <a href="https://github.com/morganoneka/DiNeR">here</a></p>
             </div>
-            <div class="col-md-5 proj-profile offset-1">
+            <div class="col-md-5 proj-profile mb-2">
               <h2>GCN Downstream</h2>
               <p>A collection of scripts written in <premph>R</premph> that analyzes topological differences in genetic co-expression networks and more easily analyzes trends in downstream DAVID analysis. </p>
 
@@ -48,17 +48,30 @@
           </div>
 
           <div class="row">
-            <div class="col-md-5 proj-profile">
+            <div class="col-md-5 proj-profile mr-2 mb-2">
               <h2>ICG Downstream</h2>
                 <p>A collection of functions in <premph>R</premph> that assists in parsing and analyzing output from Giotto's Interaction Changed Genes functionality. </p>
 
                 <p>Available <a href="https://github.com/morganoneka/ICGDownstream">here</a></p>
             </div>
-            <div class="col-md-5 proj-profile offset-1">
+            <div class="col-md-5 proj-profile mb-2">
               <h2>G Function Analysis</h2>
               <p>A series of <premph>R</premph> scripts, stitched together using a convenient <premph>snakemake</premph> pipeline, that analyzes and visualizes cell pair interactions based on the G-Function curve frequently used in ecology. This robust code package is often used by myself and my labmates. </p>
 
               <p>Available <a href="https://github.com/morganoneka/GFunctionAnalysis">here</a></p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 proj-profile mr-2 mb-2">
+              <h2>Cell Interaction Graphs</h2>
+              <p>Representation of cell-interaction trends as graphs. Classification into diagnosis groups using <premph>StellarGraph</premph>. Clustering into regions using Deep Graph Infomax.</p>
+              <p>Code not available</p>
+            </div>
+            <div class="col-md-5 proj-profile mb-2">
+              <h2>Spatial image analysis</h2>
+              <p>Used <premph>weakly-supervized learning</premph> to classify regions of interest in whole slide biological images using <a href="https://github.com/mahmoodlab/CLAM">CLAM</a>. Used features generated from <a href="https://kimialab.uwaterloo.ca/kimia/index.php/data-and-code-2/kimia-net/">KimiaNet</a> to predict spatial gene expression patterns using spatial random forest. Adapted both of these methods to work with images other than H&E slides. </p>
+              <p>Code not available</p>
             </div>
           </div>
 
@@ -69,12 +82,12 @@
           </div>
 
           <div class="row">
-            <div class="col-md-5 proj-profile">
+            <div class="col-md-5 proj-profile mr-2 mb-2">
               <h2>Music Complexity Analysis</h2>
               <p>Has music actually gotten simpler over the years? I investigate this, and much more, in this project using data from <a href="ultimate-guitar.com/">Ultimate Guitar</a> and <a href="https://www.last.fm/">Last.FM</a>. Web scraping with <premph>Beautiful Soup</premph> and interactive visualization using <premph>APEX charts</premph>.</p>
-              <p>Available <a href="https://morganoneka.github.io/UltimateGuitarAnalysis/">here</a></p>
+              <p>Available <a href="https://morganoneka.github.io/MusicalComplexityAnalysis/">here</a></p>
             </div>
-            <div class="col-md-5 proj-profile offset-1">
+            <div class="col-md-5 proj-profile mb-2">
               <h2>Music Practice</h2>
               <p>Visualization of my practice history with the goal of identifying trends and making it easier to set & achieve my practice goals. Implemented using <premph>d3.js</premph> and <premph>plotly.js</premph>.</p>
               <p>Available <a href="https://morganoneka.github.io/MusicPractice/">here</a></p>
@@ -82,12 +95,12 @@
           </div>
 
           <div class="row">
-            <div class="col-md-5 proj-profile">
+            <div class="col-md-5 proj-profile mr-2 mb-2">
               <h2>US Surnames</h2>
               <p>A basic web page which uses <premph>d3.js</premph> to more easily visualize, filter, and search US Census data on surname usage.</p>
               <p>Available <a href="https://morganoneka.github.io/names/">here</a></p>
             </div>
-            <div class="col-md-5 proj-profile offset-1">
+            <div class="col-md-5 proj-profile mb-2">
               <h2>Reddit + MBTI</h2>
               <p>Does Reddit usage differ across personality types as defined by Myer Briggs Type Indicator? Using Kaggle data plus Subreddit classification info I scraped from <a href="https://www.findareddit.com/">Find A Reddit</a>, I investigate this.</p>
 
@@ -95,17 +108,21 @@
             </div>
           </div>
 
-          <!-- <div class="row">
-            <div class="col-md-5 proj-profile">
-              <h2>Song Generation</h2>
-              <p>Using Markov Chains created in the Music Complexity Analysis project, this project randomly generates song structure and chord progression using some basic <premph>JavaScript</premph>.</p>
+          <div class="row">
+            <div class="col-md-5 proj-profile mr-2 mb-2">
+              <h2>Song Lyric Generation</h2>
+              <p>Interface with Spotify API "Spotipy", web scraping from Genius, and a simple word-prediction dictionary to generate song lyrics based on songs within a provided playlist.</p>
 
-              <p>Coming soon!</p>
+              <p>Available <a href="https://github.com/morganoneka/LyricsGenerator">here</a></p>
             </div>
-            <div class="col-md-5 proj-profile offset-1">
-              x
+            <div class="col-md-5 proj-profile mb-2">
+              <h2>Haircare Product Usage</h2>
+              <p>There are many brands and products out there geared toward textured (wavy, curly, and coily) hair, but which ones are preferred by which hair type — and which ones conquer common concerns like frizz, protein/moisture balance, and de-tangling? Using data obtained from relevant subreddits and Amazon product reviews, I compile a report of brands and products best based on these concerns.</p>
+
+              <p>Available <a href="https://github.com/morganoneka/haircare">here</a></p>
             </div>
-          </div> -->
+          </div>
+
         </div>
       </div>
   </div>

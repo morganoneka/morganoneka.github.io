@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
@@ -27,24 +27,37 @@
 
       <div class="col-9 min-vh-100">
         <h2>Who am I?</h2>
-        <p>My name is Morgan, and I'm really excited about answering cool questions using data. I have formal education in bioinformatics and a passion for solving medical problems, but I also like to apply my data science skills to my other hobbies, like music and creative writing.</p>
+        <p>My name is Morgan, and I'm really excited about answering cool questions using data. I have formal education in bioinformatics and a passion for solving medical problems, but I also like to apply my data science skills to my other interests, like music and creative writing.</p>
 
         <!-- <p>Check out my resume (TODO: link), or learn a bit more below:</p> -->
 
         <h2>Skills</h2>
         <div class="row">
-          <div class="col-sm-4 about"><h3>R</h3>
-          <p>Several projects, Statistical Computing course, specific libraries like ggplot.</p></div>
-          <div class="col-sm-4 about"><h3>Python</h3>
-          <p>Bioinformatics algorithms course, several projects. Libraries (not PANDAS but like beautiful soup, keras, etc.)?</p></div>
-          <div class="col-sm-4 about"><h3>Web Development</h3>
-          <p>HTML/CSS, Javascript (see dashboard project). <p></div>
+          <div class="col-sm-4 about skills"><h3>R</h3>
+            <ul>
+              <li><b>Visualization:</b> ggplot, ggpubr</li>
+              <li><b>Spatial data:</b> spatstat</li>
+              <li><b>Graphs/networks:</b> igraph, tidygraph/ggraph</li>
+            </ul>
+          </div>
+          <div class="col-sm-4 about skills"><h3>Python</h3>
+            <ul>
+              <li><b>Web Scraping:</b> BeautifulSoup, Selenium</li>
+              <li><b>Visualization:</b> matplotlib, plot.ly, altair, bokeh</li>
+              <li><b>Stats/Machine Learning:</b> Sci-kit-learn, Tensorflow, StellarGraph</li>
+            </ul>
+          </div>
+          <div class="col-sm-4 about skills"><h3>Web Development</h3>
+            <ul>
+              <li>HTML/CSS, Bootstrap</li>
+              <li>JavaScript, D3.js, visualization libraries like APEX Charts and PlotLy.js</li>
+            </ul></div>
         </div>
         <div class="row">
-          <div class="col-sm-4 about"><h3>Other Languages</h3>
+          <div class="col-sm-4 about skills"><h3>Other Languages</h3>
           <p>SQL, LaTeX, SAS, MATLAB, C/C#/C++</p></div>
-          <div class="col-sm-8 about"><h3>Math and Stats.</h3>
-          <p>Coursework in linear algebra, real analysis. Graduate coursework in mathematical statistics, statistical computing, and regression.</p></div>
+          <div class="col-sm-8 about skills"><h3>Math and Stats</h3>
+          <p>Undergraduate coursework in linear algebra, real analysis. Graduate coursework in mathematical statistics, statistical computing, and regression.</p></div>
         </div>
 
         <h2>Education</h2>
@@ -58,6 +71,7 @@
         <div class="row">
           <div class="col-sm-12 desc">
             <ul>
+              <li>Masters in Bioinformatics expected June 2022</li>
             <li>Graduate level coursework in biology, statistics, and programming. </li>
             <li>Funded by NIH T32 Fellowships 3/4 years. </li>
             <li>Poster presentation at <a href="https://www.quantitativebioimaging.com/2952-2/">2020 Quantitative BioImaging Conference</a> (see Abstract #533).</li>
@@ -74,11 +88,11 @@
           <div class="col-sm-12 desc">
             <ul>
             <li>BS in Math & Computer Science with a minor in Statistics</li>
-             <li>Cum Laude, Honors College (+ honors thesis)</li>
-             <li>Both majors' honors societies.</li>
-             <li>Award given to only 2 ppl per year. Leadership on several student organizations. </li>
-             <li>Presentations at JMM, Student Scholar's Day</li>
-             <li>E-board for WIC & W-STEM</li>
+             <li>Awarded Niemeyer Award, a prestigious leadership award given to only two students per year. </li>
+             <li>I was a member of the Honors College, and wrote my honors thesis about reproducibility in computational biology.</li>
+             <li>Presented a poster at the Joint Mathematics Meetings and received an Outstanding Poster Award.</li>
+             <li>I served my school's Women in STEM club for three years, two as secretary and one as president. I organized and led biweekly meetings and helped to foster a fun and uplifting environment for women in male-dominated fields.</li>
+             <li>I also was part of my school's Women in Computing club, where I was the treasurer for three years and also helped with advertising/design. In this role, I managed our organization's budget, which included communication with external donors, filling out forms to request funding from the university, and managing our account at a local bank.</li>
              <li>Undergrad research in computational social science, graph theory, and abstract algebra</li>
           </ul></div>
         </div>
@@ -93,9 +107,11 @@
         <div class="row">
           <div class="col-sm-12 desc">
             <ul>
-              <li>Presented results to non-technical collaborators in biology and medicine</li>
-              <li>Developed pipelines to analyze spatial biological data</li>
-              <li>Conducted analyses resulting in 7 publications, with several others currently in press.</li>
+              <li>Adapted spatial statistics techniques from GIS and ecology to identify spatial patterns of cells that contribute to disease progression. Developed reusable pipelines (such as my <a href="https://github.com/morganoneka/GFunctionAnalysis">G-function pipeline</a>) to generalize downstream analysis for any coordinate-based biological data, reducing turnaround times and enabling collaboration with over a dozen labs. </li>
+<li>Generated graph representations of biological images, then used graph embedding and supervised graph classification to identify cell-pair interactions associated with disease progression. Created a <a href="https://github.com/morganoneka/DiNeR">ggplot-based visualization package</a> for R to facilitate network topology comparison.</li>
+<li>Led conversations with collaborators and delivered insights to multidisciplinary teams, following the project lifecycle from data preparation to deployment.</li>
+<li>Contributed to <a href=" https://orcid.org/0000-0002-9672-0445">7 peer-reviewed publications</a>, several additional publications in preparation, local & international conference presentations, and multiple successful R01 grant applications.</li>
+
           </ul></div>
         </div>
         <div class="row">
@@ -109,10 +125,10 @@
             <ul>
               <li>Conducted wet lab and bioinformatics analysis</li>
               <li>Cleaned and submitted data to NCBI</li>
-              <li>Worked with legacy code, gave final rpesentation, continued communication after summer ended</li>
+              <!-- <li>Worked with legacy code, gave final presentation, continued communication after summer ended</li> -->
               <li>Work resulted in publication recently accepted to the Journal of Experimental Biology</li>
             </ul>
-            Worked in biology wet lab, did field work, worked with legacy code, submitted data to NCBI, gave final presentation, underwent rigorous DataCamp coursework. </div>
+             </div>
         </div>
         <div class="row">
           <div class="col-sm-9 about"><h3>Software Development Intern</h3>
@@ -121,7 +137,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 desc">Built app using C# with Xamarin, some exposure to Ruby and Javascript, agile, meetings with business side.</div>
+          <div class="col-sm-12 desc">
+            <ul><li>
+              Built iOS app using Xamarin (C# with some JavaScript and Ruby on Rails) to monitor battery levels via bluetooth</li>
+              <li>Followed Agile methodology to collaborate with non-technical stakeholders</li>
+            <ul>
+          </div>
         </div>
 
         <h2>Teaching Experience</h2>
@@ -129,9 +150,9 @@
           <div class="col-sm-12 desc">
         <p>I love talking to people about the things I'm passionate about! I do my best to include useful tutorials in my code, and I jump at opportunities to give informative presentations.</p>
 
-        <p>During my time at U of M, I have volunteered with the Carpentries, Girls Who Code, and UMySci as an educator and in curriculum development. (TODO: mention JOSE papers, share Carpentries notes)</p>
+        <p>During my time at U of M, I have volunteered with the Carpentries, Girls Who Code, and UMySci as an educator and curriculum developer.</p>
 
-        <p>While at GVSU, I worked as a Math & Stats tutor for 2 years, tutoring a variety of courses from intro statistics to abstract algebra. I also spent 3 years working as a teacher's assistant for CIS 162 (intro computer science) labs, and was a grader for a senior-level computer architecture course. </p>
+        <p>While at GVSU, I worked as a Math & Stats tutor for 2 years, tutoring a variety of courses from intro statistics to abstract algebra. I also spent 3 years working as a lab assistant for CIS 162 (intro computer science) labs, and was a grader for a senior-level computer architecture course. </p>
       </div>
     </div>
 

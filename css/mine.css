@@ -56,6 +56,18 @@ premph{
   padding: 2px;
 }
 
+.skills{
+  font-size: 14px;
+}
+
+.skills b{
+  font-weight: bold;
+}
+
+.skills ul{
+  margin-left: -20px;
+}
+
 .soc a{
   color: #000;
 }

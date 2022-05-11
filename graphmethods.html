@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/mine.css"  />
+  <script src="https://kit.fontawesome.com/131191e809.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col bg-nav min-vh-100" id="nav-placeholder">
+
+      </div>
+      <div class="col-9 min-vh-100">
+        <h2>Graph Based Methods</h2>
+        <p>Greetings! You've reached the landing page for my work in graph-based methods for spatial biological data. These projects all fall under this common theme of "graph-based", but work with different types of data and have different end-goals, so I've split them into different repositories.</p>
+
+        <p>NOTE: Some of the data and code originally used for these projects is unavailable for public upload. I've done my best to fill in any gaps in the documentation/README.</p>
+
+        <h3>Graph Classification</h3>
+        <p>View code <a href="https://github.com/morganoneka/CellGraphClassification">here</a></p>
+        <p>Giotto can tell us what cell pairs are enriched/depleted. We can then create networks. This code uses StellarGraph to classify cell interaction graphs into diagnostic groups. </p>
+
+        <h3>Spatial Gene Expression Prediction</h3>
+        <p>View code <a href="https://github.com/morganoneka/HEtoST">here</a></p>
+        <p>This code uses <a href="https://kimialab.uwaterloo.ca/kimia/index.php/data-and-code-2/kimia-net/">KimiaNet</a> to generate features from histology images, then uses this to predict spatial gene expression using Spatial Random Forest.</p>
+
+        <h3>High Attention Regions</h3>
+        <p>View code <a href="https://github.com/morganoneka/DensityAttention/tree/main/attention">here</a>.</p>
+        <p><a href="https://github.com/mahmoodlab/CLAM">CLAM</a> is a weakly supervised method for identifying "high attention" regions in pathology images, i.e. regions that help distinguish between diganostic groups. In this code, I adapt this workflow to work with raster renderings of density functions to identify high attention regions.</p>
+      </div>
+  </div>
+  </div>
+<script>
+$(function(){
+$("#nav-placeholder").load("nav.html");
+});
+</script>
+</body>
+</html>

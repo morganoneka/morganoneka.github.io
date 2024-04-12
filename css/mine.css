@@ -12,11 +12,57 @@
 
 .mytitle{
   font-family: 'Abril Fatface', cursive;
-  font-size: 24px;
+  font-size: 48px;
+}
+
+.myrow1{
+  padding:2px;
+  padding-top: 10px;
+}
+
+.myrow2{
+  background-color: #ffc3aa;
+  padding: 2px;
+  padding-top: 10px;
 }
 
 h1, h2, h3{
   font-family: 'Abril Fatface', cursive;
+}
+
+.jumbotron {
+  background-image: url("../images/katie-mcnabb-8AJuvX4hzws-unsplash.jpg");
+  background-size: cover;
+}
+
+.jumbotron-section-1 {
+  padding-top: 70px !important;
+}
+.jumbotron-section-1-bg {
+  height: 768px;
+  background-size:100% 100%;
+}
+.introduction {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  width: 300px;
+  padding: 2px;
+  /* height: 300px; */
+  /* text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); */
+  background-color: #ff8a5a;
+  box-shadow: 10px 10px black;
+}
+.introduction p {
+  font-weight: bold;
 }
 
 .about h3{
@@ -26,6 +72,10 @@ h1, h2, h3{
   font-size: 18px;
   background-color: #fbd7e2;
   padding: 2px;
+}
+
+.headerrow{
+  background-color: #fbd7e2;
 }
 
 .desc{

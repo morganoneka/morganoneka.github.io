@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="css/mytheme.css"> -->
@@ -20,8 +20,161 @@
 
 <body>
   <div class="container-fluid">
-    <div class="row flex-nowrap">
-      <div class="col bg-nav min-vh-100" id="nav-placeholder">
+    <!-- Intro -->
+    <div class="jumbotron min-vh-100">
+      <div class="container-fluid introduction">
+        <h1 class="mytitle">Morgan Oneka</h1>
+        <p>NYC Based Data Scientist</p>
+        <!-- <a href="#" class="visible-xs btn call-me">TODO: put links here</a> -->
+        <div class="soc">
+          <a href="https://github.com/morganoneka"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/morganoneka/"><i class="fab fa-linkedin"></i></a>
+          <!-- <i class="fab fa-twitter"></i> -->
+          <a href="https://orcid.org/my-orcid?orcid=0000-0002-9672-0445"><i class="fab fa-orcid"></i></a>
+          <a href = "mailto: morganoneka96@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div> 
+    </div>
+
+    <!-- About -->
+    <div class="row flex-nowrap myrow1">
+      <div class="col-1 "></div>
+      <div class="col-10 ">
+        <h2> About </h2>
+        <p>Hey! I'm Morgan, and I'm a Data Scientist based in the NYC metro area. Most recently, I was the customer data expert at Bloomingdale's; before this, I spent four years conducting bioinformatics data analysis at the University of Michigan. </p>
+        <p>I'm passionate about helping others make sense of their data, whether that involves flexing my modeling skills or simply running a few SQL queries. </p>
+
+        <p>In my spare time, I like playing music (I play piano, guitar/bass, and am currently learning violin!), creative writing, crochet, and quilting.</p>
+      </div>
+      <!-- <div class="col-3 ">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td>*picture here?*</td>
+            </tr>
+            <tr>
+              <td>MS: Bioinformatics </td>
+            </tr>
+            <tr>
+              <td>BS: Computer Science and Mathematics</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+      <div class="col-1 "></div>
+    </div>
+
+    <!-- Skills -->
+    <div class="row flex-nowrap myrow2">
+      <div class="col-1 "></div>
+      <div class="col-10 ">
+        <h2> Skills </h2>
+        <!-- <p>XYZ</p> -->
+      </div>
+      <div class="col-1 "></div>
+    </div>
+
+    <div class="row flex-nowrap myrow2">
+      <div class="col-1 "></div>
+      <div class="col-3 ">
+        <h3>Python</h3>
+        <ul>
+          <li><b>Basics:</b> numpy, pandas</li>
+          <li><b>Machine Learning:</b> scikit-learn, catboost, lightgbm, xgboost</li>
+          <li><b>Web Scraping:</b> BeautifulSoup, Selenium</li>
+          <li><b>Visualization:</b> matplotlib, plot.ly, altair, bokeh</li>
+        </ul>
+      </div>
+      <div class="col-3 ">
+        <h3>R</h3>
+        <ul>
+          <li><b>Visualization:</b> ggplot, ggpubr</li>
+          <li><b>Spatial data:</b> spatstat</li>
+          <li><b>Graphs/networks:</b> igraph, tidygraph/ggraph</li>
+        </ul>
+      </div>
+      <div class="col-3 ">
+        <h3>Web Development</h3>
+        <ul>
+          <li>HTML/CSS, Bootstrap</li>
+          <li>JavaScript, D3.js, visualization libraries like APEX Charts and PlotLy.js</li>
+        </ul>
+      </div>
+      <div class="col-1 "></div>
+    </div>
+
+    <div class="row flex-nowrap myrow2">
+    <div class="col-1 "></div>
+      <div class="col-3 ">
+        <h3>Other Languages</h3>
+        <p>SQL, LaTeX, SAS, MATLAB, C/C#/C++, Java</p>
+      </div>
+      <div class="col-3 ">
+        <h3>Data Science</h3>
+        <ul>
+          <li>Hypothesis testing, A/B testing</li>
+          <li>Model productionalization, monitoring, dashboards</li>
+          <li>Feature engineering, model selection</li>
+          <li>Git/GitLab</li>
+        </ul>
+      </div>
+      <div class="col-3 ">
+        <h3>Domain Knowledge</h3>
+        <ul>
+          <li>Ads, retail</li>
+          <li>Cancer and molecular biology</li>
+          <li>Ecology</li>
+        </ul>
+      </div>
+      <div class="col-1 "></div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="row flex-nowrap myrow1">
+      <div class="col-1 "></div>
+      <div class="col-10 ">
+        <h2>Portfolio</h2>
+        <p>Here are a few projects I think highlight my skills. To learn more about other projects I've worked on, see <a href="portfolio.html">my full portfolio page</a>.</p>
+      </div>
+      <div class="col-1 "></div>
+    </div>
+  <div class="row flex-nowrap myrow1">
+   
+    <div class="col-1 "></div>
+      <div class="col-3 ">
+        <h3>Customer Lifetime Value</h3>
+        <p><small><i>Created in collaboration with coworkers during my time at Bloomingdale's.</i></small></p>
+        <ul>
+          <li>Created a tree-based regression model using lightgbm to predict customer spend </li>
+          <li>Collaborated with data engineering team to productionalize using Airflow</li>
+        </ul>
+      </div>
+      <div class="col-3 ">
+        <h3>DiNeR (Differential Network Visualization in R)</h3>
+        <p><small><i>Created as part of research workflow during my time at the University of Michigan</i></small></p>
+        <ul>
+          <li>R-based visualization library for small-scale network comparison</li>
+          <li>Designed to work with spatial transcriptomics datasets</li>
+          <li>Used to generate figures for several papers and grant applications</li>
+          <li>Code is available <a href="https://github.com/morganoneka/DiNeR">here</a></li>
+        </ul>
+      </div>
+      <div class="col-3 ">
+        <h3>Haircare Product Usage</h3>
+        <p><small><i>Personal project</i></small></p>
+        <ul>
+          <li>Simple recommendation system for haircare products based on hair type</li>
+          <li>Dataset was obtained by scraping Reddit comments and Amazon reviews</li>
+          <li>Code is available <a href="https://github.com/morganoneka/haircare">here</a></li>
+        </ul>
+      </div>
+      <div class="col-1 "></div>
+  </div>
+  </div>
+
+  
+    
+      <!-- <div class="col bg-nav min-vh-100" id="nav-placeholder">
 
       </div>
       <div class="col-9 min-vh-100">
@@ -29,13 +182,15 @@
         <p>My name is Morgan, and I'm passionate about data storytelling. I've spent the last four years developing tools to quantify trends in spatial biological data, helping colleagues in biology and medicine learn more about human disease.</p>
 
         <p>In my spare time, I enjoy music and creative writing. I also like to travel, especially to places where I can eat good food or go on a scenic hike!</p>
-      </div>
-  </div>
+      </div> -->
+
+
+  <!-- </div> -->
   </div>
 <script>
-$(function(){
-$("#nav-placeholder").load("nav.html");
-});
+// $(function(){
+// $("#nav-placeholder").load("nav.html");
+// });
 </script>
 </body>
 </html>
